@@ -1,0 +1,608 @@
+/* Common Dashboard Styles */
+.dashboard-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: 'PPMori', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.dashboard-loading p {
+  color: #6b7280;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Common Button Styles */
+.btn-small {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.btn-small.primary {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.btn-small.primary:hover {
+  background: #1e40af;
+  border-color: #1e40af;
+}
+
+/* Common Card Styles */
+.stat-card,
+.patient-card,
+.appointment-card,
+.record-card,
+.doctor-card,
+.message-card,
+.prescription-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover,
+.patient-card:hover,
+.appointment-card:hover,
+.record-card:hover,
+.doctor-card:hover,
+.message-card:hover,
+.prescription-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Common Status Styles */
+.patient-status,
+.appointment-status,
+.record-status,
+.doctor-status,
+.message-status,
+.prescription-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.patient-status.active,
+.doctor-status.active,
+.prescription-status.active {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.appointment-status.confirmed,
+.record-status.completed {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.appointment-status.pending,
+.record-status.pending,
+.prescription-status.needs-refill {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.message-status.unread {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.message-status.read {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Common Icon Styles */
+.stat-icon,
+.patient-avatar,
+.appointment-time,
+.record-icon,
+.doctor-avatar,
+.message-avatar,
+.prescription-icon {
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  font-size: 32px;
+}
+
+.appointment-time {
+  background: #fef3c7;
+  color: #d97706;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Common Info Styles */
+.patient-info,
+.appointment-info,
+.record-info,
+.doctor-info,
+.message-info,
+.prescription-info {
+  flex: 1;
+}
+
+.patient-info h4,
+.appointment-info h4,
+.record-info h4,
+.doctor-info h4,
+.message-info h4,
+.prescription-info h4 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.patient-info p,
+.appointment-info p,
+.record-info p,
+.doctor-info p,
+.message-info p,
+.prescription-info p {
+  margin: 0 0 8px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Common Action Styles */
+.patient-actions,
+.appointment-actions,
+.record-actions,
+.doctor-actions,
+.prescription-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Common Time Styles */
+.activity-time,
+.message-time,
+.appointment-date,
+.refill-date {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Common Tab Header Styles */
+.tab-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.tab-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Common List Styles */
+.patient-list,
+.appointment-list,
+.records-list,
+.doctors-list,
+.messages-list,
+.prescriptions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Common Activity Styles */
+.activity-list {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background 0.3s ease;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-item:hover {
+  background: #f8fafc;
+}
+
+.activity-icon {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.activity-content p {
+  margin: 0 0 4px 0;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* Common Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Common Quick Actions */
+.quick-actions h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: white;
+  color: #6b7280;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.action-btn.primary {
+  color: white;
+}
+
+.action-icon {
+  font-size: 18px;
+}
+
+/* Common Overview Tab */
+.overview-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Common Main Content */
+.dashboard-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+/* Common Navigation */
+.dashboard-nav {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 32px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-tab {
+  background: none;
+  border: none;
+  padding: 16px 24px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #6b7280;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.nav-tab:hover {
+  background: #f8fafc;
+}
+
+.nav-tab.active {
+  border-bottom-color: currentColor;
+}
+
+/* Common Header */
+.dashboard-header {
+  color: white;
+  padding: 24px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.header-left h1 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.header-left p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 16px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.user-avatar {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.user-type,
+.user-specialization {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Logo Section */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  align-self: flex-start;
+}
+
+.logo-section:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.dashboard-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-main {
+    padding: 24px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 20px 24px;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .header-left {
+    align-items: center;
+  }
+
+  .logo-section {
+    align-self: center;
+  }
+  
+  .dashboard-nav {
+    padding: 0 24px;
+    overflow-x: auto;
+  }
+  
+  .nav-tab {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+  
+  .dashboard-main {
+    padding: 20px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .action-btn {
+    justify-content: center;
+  }
+  
+  .patient-card,
+  .appointment-card,
+  .record-card,
+  .doctor-card,
+  .message-card,
+  .prescription-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .patient-actions,
+  .appointment-actions,
+  .record-actions,
+  .doctor-actions,
+  .prescription-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    padding: 16px 20px;
+  }
+  
+  .header-left h1 {
+    font-size: 24px;
+  }
+
+  .logo-section {
+    padding: 6px 10px;
+  }
+
+  .dashboard-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+  
+  .dashboard-main {
+    padding: 16px;
+  }
+  
+  .stat-card {
+    padding: 20px;
+  }
+  
+  .stat-number {
+    font-size: 28px;
+  }
+}

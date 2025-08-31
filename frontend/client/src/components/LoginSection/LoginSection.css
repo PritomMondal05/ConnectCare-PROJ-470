@@ -1,0 +1,228 @@
+/* Modal Overlay Styles */
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.login-modal {
+  background: #fff;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.login-close-btn:hover {
+  color: #e74c3c;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.login-container h2 {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-size: 1.7rem;
+  text-align: center;
+  color: #2d3a4b;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.login-container label {
+  font-size: 1rem;
+  color: #2d3a4b;
+  margin-bottom: 0.2rem;
+  margin-top: 0.5rem;
+}
+
+.login-container input,
+.login-container select {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  background: #f8fafc;
+}
+
+.login-container input:focus,
+.login-container select:focus {
+  border-color: #4f8cff;
+  background: #fff;
+}
+
+.login-container button[type='submit'] {
+  margin-top: 0.5rem;
+  padding: 0.7rem 0;
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-container button[type='submit']:hover:enabled {
+  background: #2563eb;
+}
+
+.login-container button[type='submit']:disabled {
+  background: #b6c6e6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: #ffeaea;
+  color: #d32f2f;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.98rem;
+  text-align: center;
+}
+
+.success-message {
+  background: #eaffea;
+  color: #2e7d32;
+  border: 1px solid #b2dfdb;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.98rem;
+  text-align: center;
+}
+
+.login-container p {
+  margin-top: 1.2rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.login-container p button {
+  background: none;
+  border: none;
+  color: #4f8cff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.login-container p button:hover {
+  color: #2563eb;
+}
+
+/* Registration Form Styles */
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.registration-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-form label {
+  font-size: 1rem;
+  color: #2d3a4b;
+  margin-bottom: 0.2rem;
+}
+
+.registration-form input,
+.registration-form select {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  background: #f8fafc;
+}
+
+.registration-form input:focus,
+.registration-form select:focus {
+  border-color: #4f8cff;
+  background: #fff;
+}
+
+.registration-form button[type='submit'] {
+  margin-top: 0.5rem;
+  padding: 0.7rem 0;
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.registration-form button[type='submit']:hover:enabled {
+  background: #2563eb;
+}
+
+.registration-form button[type='submit']:disabled {
+  background: #b6c6e6;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-modal {
+    max-width: 100%;
+    margin: 10px;
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  }
+  .login-container {
+    gap: 0.7rem;
+  }
+}
